@@ -31,6 +31,7 @@ class ReservationAvailabilityController extends Controller
                 in: 'query',
                 required: true,
                 description: 'Date in YYYY-MM-DD format',
+                example: '2026-03-01',
                 schema: new OA\Schema(type: 'string', format: 'date')
             ),
         ],
