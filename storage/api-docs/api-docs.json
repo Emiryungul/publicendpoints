@@ -1,0 +1,54 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Public Endpoints API",
+        "description": "API documentation for public reservation endpoints.",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/reservation-availabilities": {
+            "get": {
+                "tags": [
+                    "Reservations"
+                ],
+                "summary": "Get reservation availability",
+                "operationId": "912da1e50af81e1685c97ad65a61568b",
+                "parameters": [
+                    {
+                        "name": "court_id",
+                        "in": "query",
+                        "description": "The ID of the court",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Date in YYYY-MM-DD format",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "date"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Reservations",
+            "description": "Reservations"
+        }
+    ]
+}
